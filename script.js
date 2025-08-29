@@ -2,12 +2,13 @@
 
 const heartButtons = document.getElementsByClassName("heart-btn");
 const heartCount = document.getElementById("heart-count");
-
-for (const btn of heartButtons) {
+for (let btn of heartButtons) {
     btn.addEventListener("click", function () {
-        heartCount.innerText = parseInt(heartCount.innerText) + 1;
+        let current = parseInt(heartCount.innerText);
+        heartCount.innerText = current + 1;
     });
 }
+
 
 // Copy button Functionalities
 
@@ -37,30 +38,59 @@ copyButtons.forEach(function (button) {
     });
 });
 
+//  call buttons 
 
 
- //  call functionalities
+const callButtons = document.getElementsByClassName("call-btn");
+const coinCount = document.getElementById("coin-count");
+const historyBox = document.getElementById("call-history");
 
-
-       const callBtn = document.getElementsByClassName("call-btn");
-
-for (let btn of callBtn) {
+for (let btn of callButtons) {
     btn.addEventListener("click", function () {
-       
-        const coinCount = document.getElementById("coin-count");
-        const coin = parseInt(coinCount.innerText);
-        const coinCost =parseInt(20);
+        let coin = parseInt(coinCount.innerText);
+        const coinCost = 20;
 
-        const totalCoin = coin - coinCost;
- if (totalCoin < 0) {
+        if (coin < coinCost) {
             alert("Not enough coins! You need at least 20 coins to make a call");
             return;
         }
-       
 
-        coinCount.innerText = totalCoin;
+        coinCount.innerText = coin - coinCost;
+
+        const card = btn.parentNode.parentNode
+        const title = card.querySelector("h1").innerText;
+        const number = card.querySelector(".argent-num").innerText;
+
+        alert(`📞 Calling ${title} ${number}`);
+
+
+        // call history
+
+        const time = new Date().toLocaleTimeString();
+
+        const div = document.createElement("div");
+        div.className = "flex justify-between items-center bg-[#f2f2f2] text-[#5c5c5c] p-3 mb-2 rounded-lg";
+        div.innerHTML = `
+          <div>
+            <h1>${title}</h1>
+            <p>${number}</p>
+          </div>
+          <div>
+            <p>${time}</p>
+          </div>
+        `;
+        historyBox.appendChild(div);
     });
 }
+
+
+
+//   clear history 
+
+document.getElementById("clear-history").addEventListener("click", function () {
+    historyBox.innerHTML = "";
+});
+
 
 
 

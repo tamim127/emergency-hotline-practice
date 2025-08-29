@@ -51,7 +51,7 @@
                     </div>
                     <div
                         class=" bg-[#00A63E] text-white px-[15px] py-[7px] md:px-[36px] py-[14px] rounded-3xl whitespace-nowrap">
-                        <p><span id="copy-count">2 </span>Copy</p>
+                        <p><span id="copy-count">0 </span>Copy</p>
                     </div>
                 </div>
             </div>
@@ -225,17 +225,22 @@
                 </div>
 
             </div>
-            <div class="bg-white col-span-9 md:col-span-3 shadow-xl rounded-xl order-1 md:order-2 ">
+
+            <!-- call History -->
+
+
+            <div class="bg-white col-span-9 md:col-span-3 shadow-xl rounded-xl order-1 md:order-2">
                 <div class="flex items-center justify-between p-4">
-                    <div class="flex items-center gap-2 ">
-                        <span><i class="fa-solid fa-clock-rotate-left text-[#5c5c5c] "></i></span>
+                    <div class="flex items-center gap-2">
+                        <span><i class="fa-solid fa-clock-rotate-left text-[#5c5c5c]"></i></span>
                         <h1 class="font-medium text-[20px]">Call History</h1>
                     </div>
                     <div>
-                        <button
-                            class=" bg-[#00A63E] text-white px-[18px] py-[7px] md:px-[36px] py-[14px] rounded-4xl">Clear</button>
+                        <button id="clear-history"
+                            class="bg-[#00A63E] text-white px-[18px] py-[7px] md:px-[36px] rounded-4xl">Clear</button>
                     </div>
                 </div>
+                <div id="call-history" class=" p-2 mx-[18px]"></div>
             </div>
         </div>
 
