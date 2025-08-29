@@ -39,5 +39,32 @@ copyButtons.forEach(function (button) {
 
 
 
+ //  call functionalities
+
+
+       const callBtn = document.getElementsByClassName("call-btn");
+
+for (let btn of callBtn) {
+    btn.addEventListener("click", function () {
+
+         // আগে define করতে হবে
+         
+        const coinCount = document.getElementById("coin-count");
+        const coin = parseInt(coinCount.innerText);
+        const coinCost =parseInt(20);
+
+        const totalCoin = coin - coinCost;
+ if (totalCoin < 0) {
+            alert("Not enough coins!");
+            return;
+        }
+       
+
+        coinCount.innerText = totalCoin;
+    });
+}
+
+
+
 
 

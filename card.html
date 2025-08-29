@@ -1,19 +1,21 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Emergency Hotline</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emergency Hotline</title>
 
-<!-- tailwind css -->
-<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- tailwind css -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
-<!-- font Awesome cdn -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"/>
+    <!-- font Awesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" />
 
-<!-- daisy ui -->
-<link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <!-- daisy ui -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
 </head>
+
 <body>
     <section>
         <div class="bg-white  px-[36px] py-[14px]  ">
@@ -34,7 +36,7 @@
                     </div>
                     <div
                         class="flex items-center gap-3  bg-[#41ff6b1a] font-bold px-[18px] py-[7px] md:px-[36px] py-[14px] rounded-4xl">
-                        <p>100</p>
+                        <p id="coin-count">100</p>
                         <img class="w-[24px] h-[24px]" src="./assets/coin.png" alt="">
                     </div>
                     <div
@@ -44,54 +46,123 @@
                 </div>
             </div>
         </div>
-    </section> 
+    </section>
 
-  <!-- <div class=" w-11/12 mx-auto py-[48px] grid grid-cols-1 md:grid-cols-12 gap-[30px] "> -->
- <div class="p-5 bg-white rounded-xl shadow-xl">
-                <div class="flex items-center justify-between mt-[16px]">
-                    <img class="w-[32px] h-[32px] p-2 bg-[#FFE3E2] rounded-xl" src="./assets/fire-service.png" alt="">
-                    <button class="heart-btn"><i class="fa-regular fa-heart"></i></button>
-                </div>
-                <h1 class="font-bold text-[24px] mt-[24px]">Fire Service Number</h1>
-                <p class="mt-2">Fire Service</p>
-                <p class="font-bold text-[36px] mt-4" id="argent-num">101</p>
-                <p class="bg-[#f2f2f2] text-[#5c5c5c] w-[61px] h-[37px] flex items-center justify-center rounded-3xl">Fire</p>
-                <div class="flex gap-3 mt-[24px]">
-                    <button id="copy-btn" class="btn  bg-white! text-gray-500! flex-1!"><span><i class="fa-regular fa-copy"></i></span> Copy</button>
+    <!-- <div class=" w-11/12 mx-auto py-[48px] grid grid-cols-1 md:grid-cols-12 gap-[30px] "> -->
+    <div class="flex flex-row gap-10 justify-center">
+        <div class="p-5 bg-white rounded-xl shadow-xl">
+            <div class="flex items-center justify-between mt-[16px]">
+                <img class="w-[32px] h-[32px] p-2 bg-[#FFE3E2] rounded-xl" src="./assets/fire-service.png" alt="">
+                <button class="heart-btn"><i class="fa-regular fa-heart"></i></button>
+            </div>
+            <h1 class="font-bold text-[24px] mt-[24px]">Fire Service Number</h1>
+            <p class="mt-2">Fire Service</p>
+            <p class="font-bold text-[36px] mt-4" id="argent-num">101</p>
+            <p class="bg-[#f2f2f2] text-[#5c5c5c] w-[61px] h-[37px] flex items-center justify-center rounded-3xl">Fire
+            </p>
+            <div class="flex gap-3 mt-[24px]">
+                <button id="copy-btn" class="btn  bg-white! text-gray-500! flex-1!"><span><i
+                            class="fa-regular fa-copy"></i></span> Copy</button>
 
-                    <button class="btn bg-[#00a63e]! text-white! flex-1!"><span><i class="fa-solid fa-phone"></i></span> Call</button>
-                </div>
+                <button class="btn call-btn bg-[#00a63e]! text-white! flex-1!"><span><i
+                            class="fa-solid fa-phone"></i></span> Call</button>
             </div>
+        </div>
+        <div class="p-5 bg-white rounded-xl shadow-xl">
+            <div class="flex items-center justify-between mt-[16px]">
+                <img class="w-[32px] h-[32px] p-2 bg-[#FFE3E2] rounded-xl" src="./assets/fire-service.png" alt="">
+                <button class="heart-btn"><i class="fa-regular fa-heart"></i></button>
             </div>
+            <h1 class="font-bold text-[24px] mt-[24px]">Fire Service Number</h1>
+            <p class="mt-2">Fire Service</p>
+            <p class="font-bold text-[36px] mt-4" id="argent-num">101</p>
+            <p class="bg-[#f2f2f2] text-[#5c5c5c] w-[61px] h-[37px] flex items-center justify-center rounded-3xl">Fire
+            </p>
+            <div class="flex gap-3 mt-[24px]">
+                <button id="copy-btn" class="btn  bg-white! text-gray-500! flex-1!"><span><i
+                            class="fa-regular fa-copy"></i></span> Copy</button>
+
+                <button class="btn call-btn bg-[#00a63e]! text-white! flex-1!"><span><i
+                            class="fa-solid fa-phone"></i></span> Call</button>
+            </div>
+        </div>
+        <div class="p-5 bg-white rounded-xl shadow-xl">
+            <div class="flex items-center justify-between mt-[16px]">
+                <img class="w-[32px] h-[32px] p-2 bg-[#FFE3E2] rounded-xl" src="./assets/fire-service.png" alt="">
+                <button class="heart-btn"><i class="fa-regular fa-heart"></i></button>
+            </div>
+            <h1 class="font-bold text-[24px] mt-[24px]">Fire Service Number</h1>
+            <p class="mt-2">Fire Service</p>
+            <p class="font-bold text-[36px] mt-4" id="argent-num">101</p>
+            <p class="bg-[#f2f2f2] text-[#5c5c5c] w-[61px] h-[37px] flex items-center justify-center rounded-3xl">Fire
+            </p>
+            <div class="flex gap-3 mt-[24px]">
+                <button id="copy-btn" class="btn  bg-white! text-gray-500! flex-1!"><span><i
+                            class="fa-regular fa-copy"></i></span> Copy</button>
+
+                <button class="btn call-btn bg-[#00a63e]! text-white! flex-1!"><span><i
+                            class="fa-solid fa-phone"></i></span> Call</button>
+            </div>
+        </div>
+    </div>
     <script>
-    // ১. প্রথমে আমরা বাটন, নম্বর এবং copy count কে ধরছি
-  const copyBtn = document.getElementById("copy-btn"); // Copy বাটন
-  const argentNum = document.getElementById("argent-num"); // কার্ডের নম্বর
-  const copyCount = document.getElementById("copy-count"); // navbar-এর Copy সংখ্যা
+        // ১. প্রথমে আমরা বাটন, নম্বর এবং copy count কে ধরছি
+        const copyBtn = document.getElementById("copy-btn"); // Copy বাটন
+        const argentNum = document.getElementById("argent-num"); // কার্ডের নম্বর
+        const copyCount = document.getElementById("copy-count"); // navbar-এর Copy সংখ্যা
 
-  // ২. বাটনে click event যোগ করছি
-  copyBtn.addEventListener("click", function() {
-    // ৩. কার্ডের নম্বরটা নিয়ে আসা
-    const number = argentNum.textContent.trim();
+        // ২. বাটনে click event যোগ করছি
+        copyBtn.addEventListener("click", function () {
+            // ৩. কার্ডের নম্বরটা নিয়ে আসা
+            const number = argentNum.textContent.trim();
 
-    // ৪. clipboard-এ কপি করা
-    navigator.clipboard.writeText(number)
-      .then(function() {
-        // ৫. copy successful হলে navbar count ১ বাড়ানো
-        let count = parseInt(copyCount.textContent);
-        count = count + 1; // ১ যোগ
-        copyCount.textContent = count;
+            // ৪. clipboard-এ কপি করা
+            navigator.clipboard.writeText(number)
+                .then(function () {
+                    // ৫. copy successful হলে navbar count ১ বাড়ানো
+                    let count = parseInt(copyCount.textContent);
+                    count = count + 1; // ১ যোগ
+                    copyCount.textContent = count;
 
-        // ৬. alert দেখানো
-        alert("Copied successfully!");
-      })
-      .catch(function(err) {
-        // যদি কপি না হয়, console-এ error দেখাবে
-        console.error("Failed to copy:", err);
-      });
-  });
-</script>
+                    // ৬. alert দেখানো
+                    alert("Copied successfully!");
+                })
+                .catch(function (err) {
+                    // যদি কপি না হয়, console-এ error দেখাবে
+                    console.error("Failed to copy:", err);
+                });
+        });
 
-</script>
+
+
+
+        //  call functionalities
+
+
+       const callBtn = document.getElementsByClassName("call-btn");
+
+for (let btn of callBtn) {
+    btn.addEventListener("click", function () {
+
+         // আগে define করতে হবে
+         
+        const coinCount = document.getElementById("coin-count");
+        const coin = parseInt(coinCount.innerText);
+        const coinCost =parseInt(20);
+
+        const totalCoin = coin - coinCost;
+ if (totalCoin < 0) {
+            alert("Not enough coins!");
+            return;
+        }
+       
+
+        coinCount.innerText = totalCoin;
+    });
+}
+
+
+    </script>
 </body>
+
 </html>
