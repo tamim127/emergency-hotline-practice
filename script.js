@@ -46,16 +46,14 @@ copyButtons.forEach(function (button) {
 
 for (let btn of callBtn) {
     btn.addEventListener("click", function () {
-
-         // আগে define করতে হবে
-         
+       
         const coinCount = document.getElementById("coin-count");
         const coin = parseInt(coinCount.innerText);
         const coinCost =parseInt(20);
 
         const totalCoin = coin - coinCost;
  if (totalCoin < 0) {
-            alert("Not enough coins!");
+            alert("Not enough coins! You need at least 20 coins to make a call");
             return;
         }
        
